@@ -38,7 +38,7 @@ def predict_trend(ticker: str, raw_df: pd.DataFrame):
 
     ticker_data = raw_df[raw_df["Name"] == ticker].copy()
     if len(ticker_data) < 60:
-        raise ValueError(f"Not enough data for {ticker}. Need at least 60 rows.")
+        raise ValueError(f"Not enough data  for {ticker}. Need at least 60 rows.")
 
     feat_df = build_features(ticker_data).dropna()
 
